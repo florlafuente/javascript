@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Ejercicio para ver el total de una compra que hicieron en clase //
+		compras = [10, 20, 21, 500];
+		total = 0;
+		for (var i = 0; i < compras.length; i++) {
+			total += compras [i];
+		}
+		//Tarea para el 16/05//
+		if (total<200) {
+			document.write("El total de tu compra es: "+total);
+		}
+		if (total>200 && total<250) {
+			var descuento = total*0.95;
+			document.write("El total de tu compra es: "+total+"<br>"+"Descuento: "+ (total-descuento)+"<br>"+"Total final: "+descuento);
+		} 
+		if (total>250 && total<500) {
+			var descuento = total*0.9;
+			document.write("El total de tu compra es: "+total+"<br>"+"Descuento: "+ (total-descuento)+"<br>"+"Total final: "+descuento);
+		}
+		if (total>500) {
+			var descuento = total*0.8;
+			document.write("El total de tu compra es: "+total+"<br>"+"Descuento: "+ (total-descuento)+"<br>"+"Total final: "+descuento);
+		}
+	</script>
+</body>
+</html>
