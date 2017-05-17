@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ahorcado 17-05 Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		palabra = ["naranja"]; // La palabra que van a adivinar en el juego//
+		control = [];	//Arreglo donde iremos depositando las letras que hay que adivinar SIN las repeticiones //
+		j = 0;
+		p = 0;
+
+		for (i=0; i<palabra.length; i++) {
+			for (j=0; j<control.length; j++) {
+				if (control[j] == palabra[i]) {
+					igual = true;
+				}
+			}
+		if (igual == false) {
+			control[p]=palabra [i];
+			p++;
+		}
+		}
+		
+	</script>
+</body>
+</html>
