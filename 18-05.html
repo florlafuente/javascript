@@ -1,9 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Javascript clase 18/05</title>
 </head>
 <body>
+	<h1>Ejercicio: Ahorcado</h1>
+
+	<script type="text/javascript">
+		var control = [];
+		var elemento = "A";
+		var encontrado = false;
+		var j = 0;
+		var i = 0;
+
+		/* ****Ejercicio que hicimos ayer ****
+
+		for (i = 0; i < control.length; i++) {
+			if (control [i] == elemento) {
+				encontrado = true;
+			}
+		}
+		if (encontrado == false) {
+			control+= elemento;
+			j ++
+		}
+		document.write(control);*/ 
+
+		/* ****Ejercicio con while****
+		
+		while (i < control.length && encontrado==false) {
+			if(control[i] == elemento){
+				encontrado = true;
+			}
+			i++
+		}
+		if(encontrado==false) {
+			control[j]=elemento;
+			j++;
+		} */
+
+		/* ***Ejercicio con do (ejecuta el codigo al menos una vez)*** */
+
+		do { if(control[i]==elemento) {
+			encontrado = true;
+			}
+			i ++;
+			}while(i<control.length && !encontrado )
+	</script>
 
 </body>
 </html>
