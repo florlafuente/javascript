@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<title>Repaso while</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+
+	<script type="text/javascript">
+		var nombre, edad, pais; //Concateno variables para nombrarlas, es lo mismo que nombrarlas por separado.//
+
+		nombre=prompt('Ingresá tu nombre');//La funcion prompt abre una ventana que le pregunta al usuario//
+			while(!isNaN(nombre)) {
+				nombre=prompt('Escriba un nombre válido');
+			}
+		
+		edad=prompt('Ingresá tu edad');
+		//Con esta condicion while me garantizo que siga apareciendo el prompt mientras la edad que ingrese el usuario no sea valida//
+			while(edad>123 || edad <= 0 || isNaN(edad)) { 
+				edad=prompt('Por favor, ingrese una edad valida');
+
+			}
+
+		pais=prompt('Ingresá tu pais');
+			while(!isNaN(pais)) {
+				pais=prompt('Escriba un pais valido');
+			}
+
+	</script>
+
+	<div id="contenedor">
+		<p>Nombre:
+			<script type="text/javascript"> // De esta manera hago que aparezca en pantalla la respuesta que le di al prompt//
+				document.write(nombre); 
+			</script>
+		</p>
+		<p>Edad:
+			<script type="text/javascript">
+				document.write(edad);
+			</script>
+		</p>
+		<p>País:
+			<script type="text/javascript">
+				document.write(pais);
+			</script>
+		</p>
+	</div>
+
+</body>
+</html>
