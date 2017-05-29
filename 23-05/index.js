@@ -46,7 +46,6 @@ function enviar () { //Funcion para validar los distintos campos//
 	for (var i = 0; i <nombre.length; i++) { //Funcion para asegurarme que los caracteres de un nombre sean validos//
 		if (!isLetter(nombre[i])) {
 			valido = false;
-			break;
 		}
 	}
 
