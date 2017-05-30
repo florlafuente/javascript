@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta charset="UTF-8">
+	<title>Función División</title>
+</head>
+<body>
+	<h1>División</h1>
+
+	<form>
+		<input type="text" name="numero1" placeholder="ingresa tu numero" id="numero1">
+		<p>/</p>
+		<input type="text" name="numero2" placeholder="ingresa tu numero" id="numero2">
+		<input type="text" name="operador" placeholder="+ - / *" id="operador">
+		<button onclick="calculadora(document.getElementById('operador').value, document.getElementById('numero1').value, document.getElementById('numero2').value)" type="button" class="btn">Total</button>
+		<input type="text" name="total"  id="total">
+	</form>
+
+	<script type="text/javascript" src="functions.js"></script>
+	
+</body>
+</html>
