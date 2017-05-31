@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Formulario de inscripción</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen"><!--Llamado a la hoja de estilos de bootstrap-->
-	<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div class="container">
@@ -40,7 +39,7 @@
 							<label for="edad">Edad:</label>
 							<input type="text" name="edad" id="edad" placeholder="Ingrese su edad." class= "form-control">
 						</div>
-							<button type="button" class="btn pull-left">Enviar</button>
+							<button type="button" class="btn pull-left" onclick="soloLetras(document.getElementById('nombre').value)">Enviar</button>
 					</div>
 				</div>
 			</form>
