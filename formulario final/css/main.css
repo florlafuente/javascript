@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=League+Script|Roboto');
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	}
+body {
+	background-color: #ECFFFC;
+}
+.container {
+	border-left: 1px solid #FFA1AA;
+	border-right: 1px solid #FFA1AA;
+	width: 70%;
+	background-color: #FFFFFF;
+}
+.error {
+	display:none;
+	color: #AF1400;
+	margin: 10px 0;
+}
+form {
+	border-radius: 1%;
+}
+h1 {
+	text-align: center;
+}
+#send {
+	background-color: #FFA1AA;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 25px;
+}
+#send:hover {
+	background-color: #CCCCCC;
+}

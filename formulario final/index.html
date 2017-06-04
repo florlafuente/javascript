@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="utf-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Formulario de inscripcion</title>
+</head>
+<body>
+	<div class="container">
+		<form action="" class="row" id="formulario">
+			<h1 class="col-md-12 col-sm-12">Formulario de inscripción</h1>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+    				<label for="nombre">Nombre:</label>
+    				<input type="text" class="form-control" id="nombre" name="nombre"placeholder="Ingresá tu nombre">
+ 				</div>
+ 				<div class="form-group">
+    				<label for="apellido">Apellido:</label>
+    				<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Ingresá tu apellido">
+ 				</div>
+ 				<div class="form-group">
+    				<label for="telefono">Teléfono:</label>
+    				<input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ingresá tu telefono">
+ 				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+ 				<div class="form-group">
+    				<label for="email">E-mail:</label>
+    				<input type="text" class="form-control" id="email" name="email"placeholder="Ingresá tu e-mail">
+ 				</div>
+ 				<div class="form-group">
+    				<label for="edad">Edad:</label>
+    				<input type="text" class="form-control" id="edad" name="edad" placeholder="Ingresá tu edad">
+ 				</div>
+ 				<div class="form-group">
+ 					<input type="submit" class="btn" value="Enviar" id="send">
+ 				</div>
+			</div>
+		</form>
+		<ul class="alert alert-danger error" role="alert" id="error">
+		</ul>
+		
+	</div>
+	<!--Link a Javascript -->
+	<script type="text/javascript" src="js/formulario.js"></script>
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,5 +1,7 @@
+var errorhtml = document.getElementById('errores');
 
 function validar(nombre, apellido, telefono, mail, edad) {
+	
 	var errores = [];
 
 	/*if (soloLetras(apellido) && soloLetras(nombre) && validarTel(telefono) && validarMail(mail) &&validarEdad(edad)) {
@@ -7,14 +9,38 @@ function validar(nombre, apellido, telefono, mail, edad) {
 	}
 	return false;*/
 
-	/*if(!soloLetras(nombre)) {
-		errores[] = 'El nombre solo puede contener letras';
-	}
+	if(!campoVacio(nombre) && !campoVacio(apellido) && !campoVacio(telefono) && !campoVacio(mail) && !campoVacio(edad)) {
 
-	if(!soloLetras(apellido)) {
-		errores[] = 'El apellido solo puede contener letras';
+		if(!soloLetras(nombre)) {
+			errores[0] = 'El nombre solo puede contener letras';
+			errorhtml.style.display = 'block';
+			errorhtml.innerHTML +='<li>El nombre solo puede contener letras.</li>';
+		}
+
+		if(!soloLetras(apellido)) {
+			errores[1] = 'El apellido solo puede contener letras';
+		}
+
+		if(!validarTel(telefono)) {
+			errores[2] = 'Formato de telefono invalido';
+		}
+		if(!validarEdad(edad)) {
+			errores[3] = 'La edad debe ser mayor a 21 y menor a 120';
+		}
+		if(!validarMail(mail)) {
+			errores[4] = 'Formato de mail invalido';
+		}
+
+	} else {
+		errores[0] = 'Todos los campos son obligatorios';
 	}
-*/
+}
+
+function campoVacio(x) { //Funcion para validar que los campos requeridos no esten vacios//
+	if (x.length == 0) {
+		return true;
+	}
+	return false;
 }
 
 function validarTel (tel) { //Valido la longitud y que sean solo numeros//
@@ -28,7 +54,7 @@ function validarTel (tel) { //Valido la longitud y que sean solo numeros//
 }
 
 
-function validarEdad(edad) {
+function validarEdad(edad) { //Valido edad mayor a 20 y menor a 120//
 
 	if(!isNaN(edad)) {
 
@@ -42,7 +68,7 @@ function validarEdad(edad) {
 	return false;
 }
 
-function validarMail(mail) {
+function validarMail(mail) { //Valido formato de mail con expresion regular //
 	expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; //Expresion regular para chequear formato mail//
 	if ( expr.test(mail)) {
 		return true;
@@ -50,14 +76,12 @@ function validarMail(mail) {
 	return false;
 }
 
-function soloLetras(x) {
+function soloLetras(x) { //Valido apellido y nombre con expresion regular//
 
 	expr = /^([a-zA-Z]{4,50})*$/ ; //expresion regular de intervalos de letras min 4 caracteres max 50//
 	if(expr.test(x)) {
-		alert('esta bien');
 		return true;
 	}
-	alert ('esta mal');
 	return false;
 }
 
