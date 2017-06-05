@@ -16,6 +16,9 @@ body {
 	width: 70%;
 	background-color: #FFFFFF;
 }
+#direccion {
+	display:none;
+}
 .error {
 	display:none;
 	color: #AF1400;
@@ -34,5 +37,12 @@ h1 {
 	margin-top: 25px;
 }
 #send:hover {
+	background-color: #f85665;
+}
+
+#reset {
 	background-color: #CCCCCC;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 25px;
 }
