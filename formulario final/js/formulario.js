@@ -103,13 +103,20 @@ var error = document.getElementById('error');
 			error.innerHTML += '<li>Por favor ingresá tu edad.</li>';
 			e.preventDefault();
 		}else{
-			if (edad.value > 120 || edad.value < 18) {
+			if(isNaN(parseInt(edad.value))) {
 				console.log('Edad invalida');
 				error.style.display = 'block';
-				error.innerHTML += '<li>Por favor ingresá una edad válida.</li>';
+				error.innerHTML += '<li>La edad debe ser un numero</li>';
 				e.preventDefault();
 			} else {
-				error.style.display = 'none';
+				if (parseInt(edad.value) > 120 || parseInt(edad.value) < 18) {
+					console.log('Edad invalida');
+					error.style.display = 'block';
+					error.innerHTML += '<li>Por favor ingresá una edad válida.</li>';
+					e.preventDefault();
+				}else{
+					console.log('Edad valida');
+				}
 			}
 		}
 	} //Fin validar edad //
